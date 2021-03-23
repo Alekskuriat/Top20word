@@ -10,8 +10,7 @@ public class Main {
         ArrayList<String> arrayListString = new ArrayList<>();
 
         InputStream stream = Main.class.getResourceAsStream("book.txt");
-        int lenght = stream.available();
-        byte[] data = new byte[lenght];
+        byte[] data = new byte[stream.available()];
         stream.read(data);
         String text = new String(data);
 
@@ -23,6 +22,7 @@ public class Main {
         }
 
         Collections.addAll(arrayListString, lines);
+
         top20word(arrayListString);
     }
 
